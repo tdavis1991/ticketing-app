@@ -12,7 +12,7 @@ const ticketSchema = new Schema(
     },
     status: {
       type: String,
-      enum: ["open", "in-progress", "resolved", "closed"],
+      enum: ["open", "in-progress", "resolved"],
       default: "open",
     },
     severity: {
