@@ -15,7 +15,7 @@ export const GET = async (req, { params }) => {
   }
 };
 
-export const DELETE = async ({ params }) => {
+export const DELETE = async (req, { params }) => {
   try {
     connectToDB();
 
