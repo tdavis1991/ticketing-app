@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "./(components)/Nav";
+import Provider from "./(components)/Provider";
 import { Inter } from "next/font/google";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -18,10 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col h-screen max-h-screen">
-          <Nav />
-          <div className="flex-grow overflow-y-auto bg-page text-default-text">
-            {children}
-          </div>
+          <Provider>
+            <Nav />
+            <div className="flex-grow overflow-y-auto bg-page text-default-text">
+              {children}
+            </div>
+          </Provider>
         </div>
       </body>
     </html>
